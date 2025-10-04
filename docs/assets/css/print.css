@@ -1,0 +1,30 @@
+@page {
+  size: A4;
+  margin: 20mm;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+.itinerary-page {
+  padding: 0;
+}
+
+.itinerary-header button {
+  display: none;
+}
+
+.itinerary-content .itinerary-list li,
+.itinerary-notes li {
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+}
+
+.itinerary-footer {
+  margin-top: 2rem;
+  font-style: italic;
+}

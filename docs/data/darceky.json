@@ -1,0 +1,23 @@
+[
+  {
+    "id": "dar1",
+    "nazov": "Prenocovanie našom honeymoone",
+    "popis": "Príspevok na romantický.",
+    "odkaz": "https://www.booking.com",
+    "stav": "volne"
+  },
+  {
+    "id": "dar2",
+    "nazov": "Kávovar",
+    "popis": "Asi najdôležitejšia položka z tohto zoznamu pre nevestu.",
+    "odkaz": "https://www.alza.sk",
+    "stav": "rezervovane"
+  },
+  {
+    "id": "dar3",
+    "nazov": "Mačací čarodejník",
+    "popis": "Živá mačička, ktorá vie kúzliť.",
+    "odkaz": "https://share.google/images/P01yKAeQBlvA3PSQd",
+    "stav": "darovane"
+  }
+]
