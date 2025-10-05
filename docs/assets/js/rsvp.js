@@ -112,6 +112,12 @@
 
   const simulateDelay = () => new Promise((resolve) => window.setTimeout(resolve, 600));
 
+  const emailjsPublicKey = "cWfUkiF8opmoO8seW";
+  const emailjsServiceId = "service_fmou3wm";
+  const emailjsTemplateId = "template_vf5bqkr";
+
+  emailjs.init(emailjsPublicKey);
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     clearFieldErrors();
@@ -150,7 +156,6 @@
         body: formData,
       });
 
-      // Získaj odpoveď aj pri starších prehliadačoch
       let body;
       try {
         body = await response.json();
@@ -161,6 +166,10 @@
       await simulateDelay();
 
       if (response.ok) {
+        // Send confirmation email using EmailJS
+        const formObject = Object.fromEntries(formData.entries());
+        await emailjs.send(emailjsServiceId, emailjsTemplateId, formObject);
+
         form.reset();
         setStatus("success", successMessage);
       } else {

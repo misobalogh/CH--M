@@ -1,306 +1,289 @@
 <!DOCTYPE html>
 <html lang="sk">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CH&amp;M</title>
-    <meta
-      name="description"
-      content="CH+M"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="icon" type="image/png" href="./assets/favicon/favicon-32.png" />
-  </head>
-  <body>
-    <header class="site-header" id="domov">
-      <section class="hero hero--full" aria-labelledby="hero-title">
-        <figure class="hero__media">
-          <img
-            src="./assets/images/hero.png"
-            loading="lazy"
-          />
-        </figure>
-        <div class="hero__overlay">
-          <p class="hero__eyebrow">28. august 2026 • Čierna Voda</p>
-          <h1 id="hero-title" class="hero__title">CHIARA &amp; MICHAL</h1>
-        </div>
-      </section>
-      <nav class="top-nav" aria-label="Hlavná navigácia">
-        <div class="top-nav__container">
-          <a class="brand" href="#domov">CH&amp;M</a>
-          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
-            <span class="sr-only">Zobraziť menu</span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div id="nav-list" class="nav-drawer nav-list" data-nav-drawer>
-            <ul class="nav-links">
-              <li><a href="#miesto">Miesto &amp; ubytovanie</a></li>
-              <li><a href="#program">Program</a></li>
-              <li><a href="#rsvp">RSVP</a></li>
-              <li><a href="#darceky">Dary</a></li>
-              <li><a href="#galeria">Galéria</a></li>
-            </ul>
-            <a class="button button--primary top-nav__cta" href="#rsvp">Potvrď účasť</a>
-          </div>
-        </div>
-      </nav>
-      <section class="countdown" aria-labelledby="countdown-heading">
-        <h2 id="countdown-heading" class="section-title">Už len</h2>
-        <div
-          class="countdown__grid"
-          data-countdown-target="2026-08-28T15:00:00+02:00"
-          data-countdown-finished="Svadba práve prebieha!"
-        >
-          <div class="countdown__item">
-            <span class="countdown__number" data-unit="days">000</span>
-            <span class="countdown__label">Dní</span>
-          </div>
-          <div class="countdown__item">
-            <span class="countdown__number" data-unit="hours">00</span>
-            <span class="countdown__label">Hodín</span>
-          </div>
-          <div class="countdown__item">
-            <span class="countdown__number" data-unit="minutes">00</span>
-            <span class="countdown__label">Minút</span>
-          </div>
-          <div class="countdown__item">
-            <span class="countdown__number" data-unit="seconds">00</span>
-            <span class="countdown__label">Sekúnd</span>
-          </div>
-        </div>
-        <p class="countdown__message" aria-live="polite"></p>
-      </section>
-    </header>
 
-    <main>
-      <section id="vers" class="section verse">
-        <blockquote>
-          „Dvom je lepšie ako jednému, lebo majú dobrú odmenu za svoju námahu. Ak padnú, jeden druhého zodvihne.“
-           (Kazateľ 4:9-10)
-        </blockquote>
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CH&amp;M</title>
+  <meta name="description" content="CH+M" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="icon" type="image/png" href="./assets/favicon/favicon-32.png" />
+</head>
 
-      <section id="miesto" class="section venue">
-        <h2 class="section-title">Miesto &amp; ubytovanie</h2>
-        <div class="section__content">
-          <p>
-            Svadobná hostina sa uskutoční v Hoteli Agátka v Čiernej Vode, kúsok od Bratislavy.
-          </p>
-          <address>
-            Hotel Agátka<br />
-            Pezinská 901/5<br />
-            Čierna Voda, 900 25 Chorvátsky Grob
-          </address>
-          <p><a class="text-link" href="https://www.hotelagatka.sk/" target="_blank" rel="noopener">hotelagatka.sk</a></p>
-          <div class="iframe-wrapper">
-            <iframe
-              src="https://www.google.com/maps?q=Hotel+Ag%C3%A1tka,+Pezinsk%C3%A1+901%2F5,+%C4%8Cierna+Voda&output=embed"
-              style="border:0;"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Mapa s polohou Hotela Agátka"
-            ></iframe>
-          </div>
-          <ul class="info-list">
-            <li>Parkovanie je možné priamo pri hoteli, z Bratislavy jazdí autobus č. <span class="placeholder">TODO</span> na zastávku TODO.</li>
+<body>
+  <header class="site-header" id="domov">
+    <section class="hero hero--full" aria-labelledby="hero-title">
+      <figure class="hero__media">
+        <img src="./assets/images/hero.png" loading="lazy" />
+      </figure>
+      <div class="hero__overlay">
+        <p class="hero__eyebrow">28. august 2026 • Čierna Voda</p>
+        <h1 id="hero-title" class="hero__title">CHIARA &amp; MICHAL</h1>
+      </div>
+    </section>
+    <nav class="top-nav" aria-label="Hlavná navigácia">
+      <div class="top-nav__container">
+        <a class="brand" href="#domov">CH&amp;M</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span class="sr-only">Zobraziť menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="nav-list" class="nav-drawer nav-list" data-nav-drawer>
+          <ul class="nav-links">
+            <li><a href="#miesto">Miesto &amp; ubytovanie</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#darceky">Dary</a></li>
+            <li><a href="#galeria">Galéria</a></li>
           </ul>
-        </div>
-      </section>
-
-      <section id="program" class="section schedule">
-        <h2 class="section-title">Program dňa</h2>
-        <div class="timeline">
-          <article class="timeline__item">
-            <h3>Obrad</h3>
-            <p class="timeline__time">TODO čas</p>
-            <p class="timeline__details">Krátky opis obradu.</p>
-          </article>
-          <article class="timeline__item">
-            <h3>Hostina</h3>
-            <p class="timeline__time">TODO čas</p>
-            <p class="timeline__details">Spoločná večera a prípitok.</p>
-          </article>
-          <article class="timeline__item">
-            <h3>Zábava</h3>
-            <p class="timeline__time">TODO čas</p>
-            <p class="timeline__details">Hudba, tanec, zábava.</p>
-          </article>
-        </div>
-        <a class="button button--outline" href="./itinerar.html" target="_blank">Stiahnuť program</a>
-      </section>
-
-      <section id="svadobna-strana" class="section wedding-party">
-        <p class="section__intro">
-          V pripade akychkolvek informacii sa nevahjte obratit na nas alebo nasich sikovnych pomocnikov
-        </p>
-        <div class="party-grid">
-          <article class="party-card">
-            <div class="party-card__image">
-              <img src="./assets/images/gallery2.png" alt="TODO meno" loading="lazy" />
-            </div>
-            <div class="party-card__body">
-              <h3>TODO meno</h3>
-              <p>Prvá družička</p>
-            </div>
-          </article>
-          <article class="party-card">
-            <div class="party-card__image">
-              <img src="./assets/images/gallery3.png" alt="TODO meno" loading="lazy" />
-            </div>
-            <div class="party-card__body">
-              <h3>TODO meno</h3>
-              <p>Prvý družba</p>
-            </div>
-          </article>
-          <article class="party-card">
-            <div class="party-card__image">
-              <img src="./assets/images/gallery1.png" alt="TODO meno" loading="lazy" />
-            </div>
-            <div class="party-card__body">
-              <h3>TODO meno</h3>
-              <p>Koordinátorka dňa</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="rsvp" class="section rsvp">
-        <h2 class="section-title">RSVP</h2>
-        <p class="section__intro">
-          Prosíme, potvrďte svoju účasť najneskôr do <span class="placeholder">TODO dátum</span>.
-        </p>
-        <form
-          class="form"
-          action="https://formspree.io/f/your-form-id"
-          method="post"
-          id="rsvp-form"
-          novalidate
-          data-success-message="Ďakujeme! Tvoje RSVP sme prijali a čoskoro sa ozveme."
-          data-error-message="Ups, niečo sa pokazilo. Skúste to prosím znova alebo nám napíšte e-mail."
-        >
-          <input type="hidden" name="Form" value="RSVP Chiara &amp; Michal" />
-          <div class="form__status" role="status" aria-live="polite"></div>
-          <div class="form__group">
-            <label for="guest-name">Meno a priezvisko</label>
-            <input id="guest-name" name="Meno" type="text" placeholder="Vaše meno" required />
-          </div>
-          <div class="form__group">
-            <label for="guest-email">E-mail</label>
-            <input id="guest-email" name="Email" type="email" placeholder="vas@email.com" required />
-          </div>
-          <div class="form__group">
-            <label for="guest-names">Mená hostí (uveďte všetkých, za ktorých odpovedáte)</label>
-            <textarea
-              id="guest-names"
-              name="Mená hostí"
-              rows="2"
-              placeholder="Napríklad: Misko, Matus, Zorka Baloghovci"
-              required
-            ></textarea>
-          </div>
-          <div class="form__group">
-            <label for="guest-notes">Poznámky / stravovanie</label>
-            <textarea id="guest-notes" name="Poznámky" rows="3" placeholder="Alergie, špeciálne želania..."></textarea>
-          </div>
-          <div class="form__group">
-            <label for="guest-songs">Songy ktoré chcem počuť!</label>
-            <textarea id="guest-songs" name="Piesne" rows="3" placeholder="Zadajte názvy piesní..."></textarea>
-          </div>
-          <div class="form__group">
-            <label for="gift-choice">Chcem prispieť na dar</label>
-            <input id="gift-choice" name="Darček" type="text" placeholder="Názov daru z nášho zoznamu" />
-          </div>
-          <button type="submit" class="button button--primary">Odoslať RSVP</button>
-          <p class="form__note">Po odoslaní obdržíte potvrdzujúci e-mail.</p>
-          <p class="form__privacy">
-            Vaše údaje použijeme iba na organizačné účely svadby. V prípade otázok nás kontaktujte na
-            <a class="text-link" href="mailto:TODO@email.com">TODO@email.com</a>.
-          </p>
-        </form>
-      </section>
-
-      <section id="darceky" class="section gifts">
-        <h2 class="section-title">Svadobné dary</h2>
-        <p class="section__intro">png
-          Ak by ste nám chceli pomôcť s headstartom do nášho spoločného života, možete prispieť na niektorý zo zoznamu darov, nižšie. Stav jednotlivých položiek sa bude pravidelne
-          aktualizovať.
-        </p>
-        <div id="gift-list" class="gift-table" data-gifts-source="./data/darceky.json">
-          <!-- Darčeky sa načítajú dynamicky -->
-        </div>
-        <div class="registry">
-          <h3 class="registry__title">Inšpirácie a finančné darčeky</h3>
-          <ul class="registry__list">
-            <li>
-              <strong>Bankový prevod:</strong> IBAN <span class="placeholder">TODO</span> (do poznámky prosím uveďte svoje meno).
-            </li>
-            <li>
-              <strong>Darčekové poukážky:</strong> <a class="text-link" href="https://www.ikea.com/sk/sk/" target="_blank" rel="noopener">IKEA</a>,
-              <a class="text-link" href="https://www.alza.sk/" target="_blank" rel="noopener">Alza.sk</a>.
-            </li>
-            <li>
-              <strong>Koláče:</strong> Ak by ste chceli priniesť domáce koláčiky, napíšte nám prosím v RSVP poznámke.
-            </li>
-          </ul>
-        </div>
-        <p class="section__note">Posledná aktualizácia: <span class="placeholder">TODO dátum</span></p>
-      </section>
-
-      <section id="galeria" class="section gallery">
-        <h2 class="section-title">Galéria</h2>
-        <div class="gallery__grid" data-gallery>
-          <figure class="gallery__item">
-            <a href="./assets/images/gallery1.png" data-gallery-item>
-              <img src="./assets/images/gallery1.png" loading="lazy" />
-            </a>
-            <figcaption>TODO</figcaption>
-          </figure>
-          <figure class="gallery__item">
-            <a href="./assets/images/gallery2.png" data-gallery-item>
-              <img src="./assets/images/gallery2.png" loading="lazy" />
-            </a>
-            <figcaption>TODO</figcaption>
-          </figure>
-          <figure class="gallery__item">
-            <a href="./assets/images/gallery3.png" data-gallery-item>
-              <img src="./assets/images/gallery3.png" loading="lazy" />
-            </a>
-            <figcaption>TODO</figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
-
-    <footer id="kontakt" class="site-footer">
-      <div class="footer__content">
-        <div>
-          <h2 class="footer__title">Ostaňme v kontakte</h2>
-          <ul class="footer__list">
-            <li><strong>E-mail:</strong> <a href="mailto:TODO@email.com">TODO@email.com</a></li>
-            <li><strong>Telefón:</strong> <a href="tel:+421XXXXXXXXX">+421 XXX XXX XXX</a></li>
-          </ul>
-        </div>
-        <div class="footer__meta">
-          <p>Chiara &amp; Michal • 28. august 2026 • Hotel Agátka</p>
-          <a class="text-link" href="#domov">Späť na začiatok</a>
+          <a class="button button--primary top-nav__cta" href="#rsvp">Potvrď účasť</a>
         </div>
       </div>
-    </footer>
+    </nav>
+    <section class="countdown" aria-labelledby="countdown-heading">
+      <h2 id="countdown-heading" class="section-title">Už len</h2>
+      <div class="countdown__grid" data-countdown-target="2026-08-28T15:00:00+02:00"
+        data-countdown-finished="Svadba práve prebieha!">
+        <div class="countdown__item">
+          <span class="countdown__number" data-unit="days">000</span>
+          <span class="countdown__label">Dní</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" data-unit="hours">00</span>
+          <span class="countdown__label">Hodín</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" data-unit="minutes">00</span>
+          <span class="countdown__label">Minút</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" data-unit="seconds">00</span>
+          <span class="countdown__label">Sekúnd</span>
+        </div>
+      </div>
+      <p class="countdown__message" aria-live="polite"></p>
+    </section>
+  </header>
 
-    <script src="./assets/js/main.js" defer></script>
-    <script src="./assets/js/countdown.js" defer></script>
-    <script src="./assets/js/rsvp.js" defer></script>
-    <script src="./assets/js/gifts.js" defer></script>
-    <script src="./assets/js/gallery.js" defer></script>
-  </body>
+  <main>
+    <section id="vers" class="section verse">
+      <blockquote>
+        „Dvom je lepšie ako jednému, lebo majú dobrú odmenu za svoju námahu. Ak padnú, jeden druhého zodvihne.“
+        (Kazateľ 4:9-10)
+      </blockquote>
+    </section>
+
+    <section id="miesto" class="section venue">
+      <h2 class="section-title">Miesto &amp; ubytovanie</h2>
+      <div class="section__content">
+        <p>
+          Svadobná hostina sa uskutoční v Hoteli Agátka v Čiernej Vode, kúsok od Bratislavy.
+        </p>
+        <address>
+          Hotel Agátka<br />
+          Pezinská 901/5<br />
+          Čierna Voda, 900 25 Chorvátsky Grob
+        </address>
+        <p><a class="text-link" href="https://www.hotelagatka.sk/" target="_blank" rel="noopener">hotelagatka.sk</a></p>
+        <div class="iframe-wrapper">
+          <iframe
+            src="https://www.google.com/maps?q=Hotel+Ag%C3%A1tka,+Pezinsk%C3%A1+901%2F5,+%C4%8Cierna+Voda&output=embed"
+            style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa s polohou Hotela Agátka"></iframe>
+        </div>
+        <ul class="info-list">
+          <li>Parkovanie je možné priamo pri hoteli, z Bratislavy jazdí autobus č. <span class="placeholder">TODO</span>
+            na zastávku TODO.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="program" class="section schedule">
+      <h2 class="section-title">Program dňa</h2>
+      <div class="timeline">
+        <article class="timeline__item">
+          <h3>Obrad</h3>
+          <p class="timeline__time">TODO čas</p>
+          <p class="timeline__details">Krátky opis obradu.</p>
+        </article>
+        <article class="timeline__item">
+          <h3>Hostina</h3>
+          <p class="timeline__time">TODO čas</p>
+          <p class="timeline__details">Spoločná večera a prípitok.</p>
+        </article>
+        <article class="timeline__item">
+          <h3>Zábava</h3>
+          <p class="timeline__time">TODO čas</p>
+          <p class="timeline__details">Hudba, tanec, zábava.</p>
+        </article>
+      </div>
+      <a class="button button--outline" href="./itinerar.html" target="_blank">Stiahnuť program</a>
+    </section>
+
+    <section id="svadobna-strana" class="section wedding-party">
+      <p class="section__intro">
+        V pripade akychkolvek informacii sa nevahjte obratit na nas alebo nasich sikovnych pomocnikov
+      </p>
+      <div class="party-grid">
+        <article class="party-card">
+          <div class="party-card__image">
+            <img src="./assets/images/gallery2.png" alt="TODO meno" loading="lazy" />
+          </div>
+          <div class="party-card__body">
+            <h3>TODO meno</h3>
+            <p>Prvá družička</p>
+          </div>
+        </article>
+        <article class="party-card">
+          <div class="party-card__image">
+            <img src="./assets/images/gallery3.png" alt="TODO meno" loading="lazy" />
+          </div>
+          <div class="party-card__body">
+            <h3>TODO meno</h3>
+            <p>Prvý družba</p>
+          </div>
+        </article>
+        <article class="party-card">
+          <div class="party-card__image">
+            <img src="./assets/images/gallery1.png" alt="TODO meno" loading="lazy" />
+          </div>
+          <div class="party-card__body">
+            <h3>TODO meno</h3>
+            <p>Koordinátorka dňa</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section rsvp">
+      <h2 class="section-title">RSVP</h2>
+      <p class="section__intro">
+        Prosíme, potvrďte svoju účasť najneskôr do <span class="placeholder">TODO dátum</span>.
+      </p>
+      <form class="form" action="https://formspree.io/f/xkgqzjlk" method="post" id="rsvp-form" novalidate
+        data-success-message="Ďakujeme! Tvoje RSVP sme prijali a čoskoro sa ozveme."
+        data-error-message="Ups, niečo sa pokazilo. Skúste to prosím znova alebo nám napíšte e-mail.">
+        <input type="hidden" name="Form" value="RSVP Chiara &amp; Michal" />
+        <div class="form__status" role="status" aria-live="polite"></div>
+        <div class="form__group">
+          <label for="guest-name">Meno a priezvisko</label>
+          <input id="guest-name" name="Meno" type="text" placeholder="Vaše meno" required />
+        </div>
+        <div class="form__group">
+          <label for="guest-email">E-mail</label>
+          <input id="guest-email" name="Email" type="email" placeholder="vas@email.com" required />
+        </div>
+        <div class="form__group">
+          <label for="guest-names">Mená hostí (uveďte všetkých, za ktorých odpovedáte)</label>
+          <textarea id="guest-names" name="Mená hostí" rows="2" placeholder="Napríklad: Misko, Matus, Zorka Baloghovci"
+            required></textarea>
+        </div>
+        <div class="form__group">
+          <label for="guest-notes">Poznámky / stravovanie</label>
+          <textarea id="guest-notes" name="Poznámky" rows="3" placeholder="Alergie, špeciálne želania..."></textarea>
+        </div>
+        <div class="form__group">
+          <label for="guest-songs">Songy ktoré chcem počuť!</label>
+          <textarea id="guest-songs" name="Piesne" rows="3" placeholder="Zadajte názvy piesní..."></textarea>
+        </div>
+        <div class="form__group">
+          <label for="gift-choice">Chcem prispieť na dar</label>
+          <input id="gift-choice" name="Darček" type="text" placeholder="Názov daru z nášho zoznamu" />
+        </div>
+        <button type="submit" class="button button--primary">Odoslať RSVP</button>
+        <p class="form__note">Po odoslaní obdržíte potvrdzujúci e-mail.</p>
+        <p class="form__privacy">
+          Vaše údaje použijeme iba na organizačné účely svadby. V prípade otázok nás kontaktujte na
+          <a class="text-link" href="mailto:baloghmichal03@email.com">baloghmichal03@email.com</a>.
+        </p>
+      </form>
+    </section>
+
+    <section id="darceky" class="section gifts">
+      <h2 class="section-title">Svadobné dary</h2>
+      <p class="section__intro">
+        Ak by ste nám chceli pomôcť so štartom do nášho spoločného života, možete prispieť na niektorý zo zoznamu darov,
+        nižšie. Stav jednotlivých položiek sa bude pravidelne
+        aktualizovať.
+      </p>
+      <div id="gift-list" class="gift-table" data-gifts-source="./data/darceky.json">
+      </div>
+      <div class="registry">
+        <h3 class="registry__title">Inšpirácie a finančné darčeky</h3>
+        <ul class="registry__list">
+          <li>
+            <strong>Bankový prevod:</strong> IBAN <span class="placeholder">TODO</span> (do poznámky prosím uveďte svoje
+            meno).
+          </li>
+          <li>
+            <strong>Darčekové poukážky:</strong> <a class="text-link" href="https://www.ikea.com/sk/sk/" target="_blank"
+              rel="noopener">IKEA</a>,
+            <a class="text-link" href="https://www.alza.sk/" target="_blank" rel="noopener">Alza.sk</a>.
+          </li>
+          <li>
+            <strong>Koláče:</strong> Ak by ste chceli priniesť domáce koláčiky, napíšte nám prosím v RSVP poznámke.
+          </li>
+        </ul>
+      </div>
+      <p class="section__note">Posledná aktualizácia: <span class="placeholder">TODO dátum</span></p>
+    </section>
+
+    <section id="galeria" class="section gallery">
+      <h2 class="section-title">Galéria</h2>
+      <div class="gallery__grid" data-gallery>
+        <figure class="gallery__item">
+          <a href="./assets/images/gallery1.png" data-gallery-item>
+            <img src="./assets/images/gallery1.png" loading="lazy" />
+          </a>
+          <figcaption>TODO</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <a href="./assets/images/gallery2.png" data-gallery-item>
+            <img src="./assets/images/gallery2.png" loading="lazy" />
+          </a>
+          <figcaption>TODO</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <a href="./assets/images/gallery3.png" data-gallery-item>
+            <img src="./assets/images/gallery3.png" loading="lazy" />
+          </a>
+          <figcaption>TODO</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontakt" class="site-footer">
+    <div class="footer__content">
+      <div>
+        <h2 class="footer__title">Ostaňme v kontakte</h2>
+        <ul class="footer__list">
+          <li><strong>E-mail:</strong> <a href="mailto:baloghmichal03@email.com">baloghmichal03@email.com</a></li>
+          <li><strong>Telefón:</strong> <a href="tel:+421949451906">+421 949 451 906</a></li>
+        </ul>
+      </div>
+      <div class="footer__meta">
+        <p>Chiara &amp; Michal • 28. august 2026 • Hotel Agátka</p>
+        <a class="text-link" href="#domov">Späť na začiatok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/countdown.js" defer></script>
+  <script src="./assets/js/rsvp.js" defer></script>
+  <script src="./assets/js/gifts.js" defer></script>
+  <script src="./assets/js/gallery.js" defer></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+</body>
+
 </html>
