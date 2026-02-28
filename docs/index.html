@@ -41,7 +41,7 @@
             <li><a href="#miesto">Miesto &amp; ubytovanie</a></li>
             <li><a href="#program">Program</a></li>
             <li><a href="#rsvp">RSVP</a></li>
-            <li><a href="#darceky">Dary</a></li>
+            <!-- <li><a href="#darceky">Dary</a></li> -->
             <li><a href="#galeria">Galéria</a></li>
           </ul>
           <a class="button button--primary top-nav__cta" href="#rsvp">Potvrď účasť</a>
@@ -111,24 +111,34 @@
       <div class="timeline">
         <article class="timeline__item">
           <h3>Obrad</h3>
-          <p class="timeline__time">TODO čas</p>
-          <p class="timeline__details">Krátky opis obradu.</p>
+          <p class="timeline__time">16:00</p>
+          <p class="timeline__details">
+            <a class="text-link" href="https://www.google.com/maps/dir/Ka%C5%A1tiel+Agatka,+Pezinsk%C3%A1+901%2F5,+%C4%8Cierna+Voda,+900+25+Chorv%C3%A1tsky+Grob/Kostol+sv.+J%C3%A1na+Pavla+II.,+Na+pasienku+2B,+%C4%8Cierna+Voda,+900+25+Chorv%C3%A1tsky+Grob/@48.2254533,17.2333573,18z/data=!4m14!4m13!1m5!1m1!1s0x476c901fe4c719bf:0xac984c8b0fa92d18!2m2!1d17.2320007!2d48.2248789!1m5!1m1!1s0x476c901e4f279e19:0xe9948b3d8d68a7d7!2m2!1d17.2356903!2d48.2256248!3e3?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+              Kostol sv. Jána Pavla II., Na pasienku 2B, Čierna Voda
+            </a>
+          </p>
+          <p class="timeline__details">Kostol je vzdialený 5 minút peši od Hotela Agátka, kde nasleduje hostina. Auto môžete zaparkovať priamo pri hoteli alebo pri kostole.</p>
         </article>
         <article class="timeline__item">
           <h3>Hostina</h3>
-          <p class="timeline__time">TODO čas</p>
+          <p class="timeline__time">18:00</p>
           <p class="timeline__details">Spoločná večera a prípitok.</p>
         </article>
         <article class="timeline__item">
           <h3>Zábava</h3>
-          <p class="timeline__time">TODO čas</p>
+          <p class="timeline__time">21:00</p>
           <p class="timeline__details">Hudba, tanec, zábava.</p>
+        </article>
+        <article class="timeline__item">
+          <h3>Čepčenie</h3>
+          <p class="timeline__time">00:00</p>
+          <p class="timeline__details">...</p>
         </article>
       </div>
       <a class="button button--outline" href="./itinerar.html" target="_blank">Stiahnuť program</a>
     </section>
 
-    <section id="svadobna-strana" class="section wedding-party">
+    <!-- <section id="svadobna-strana" class="section wedding-party">
       <p class="section__intro">
         V pripade akychkolvek informacii sa nevahjte obratit na nas alebo nasich sikovnych pomocnikov
       </p>
@@ -161,7 +171,7 @@
           </div>
         </article>
       </div>
-    </section>
+    </section> -->
 
     <section id="rsvp" class="section rsvp">
       <h2 class="section-title">RSVP</h2>
@@ -169,7 +179,7 @@
         Prosíme, potvrďte svoju účasť najneskôr do <span class="placeholder">TODO dátum</span>.
       </p>
       <form class="form" action="https://formspree.io/f/xkgqzjlk" method="post" id="rsvp-form" novalidate
-        data-success-message="Ďakujeme! Tvoje RSVP sme prijali a čoskoro sa ozveme."
+        data-success-message="Ďakujeme! Vašu odpoveď sme prijali a čoskoro sa ozveme."
         data-error-message="Ups, niečo sa pokazilo. Skúste to prosím znova alebo nám napíšte e-mail.">
         <input type="hidden" name="Form" value="RSVP Chiara &amp; Michal" />
         <div class="form__status" role="status" aria-live="polite"></div>
@@ -191,14 +201,14 @@
           <textarea id="guest-notes" name="Poznámky" rows="3" placeholder="Alergie, špeciálne želania..."></textarea>
         </div>
         <div class="form__group">
-          <label for="guest-songs">Songy ktoré chcem počuť!</label>
+          <label for="guest-songs">Pesničky, na ktoré si radi zatancujete</label>
           <textarea id="guest-songs" name="Piesne" rows="3" placeholder="Zadajte názvy piesní..."></textarea>
         </div>
-        <div class="form__group">
+        <!-- <div class="form__group">
           <label for="gift-choice">Chcem prispieť na dar</label>
           <input id="gift-choice" name="Darček" type="text" placeholder="Názov daru z nášho zoznamu" />
-        </div>
-        <button type="submit" class="button button--primary">Odoslať RSVP</button>
+        </div> -->
+        <button type="submit" class="button button--primary">Odoslať odpoveď</button>
         <p class="form__note">Po odoslaní obdržíte potvrdzujúci e-mail.</p>
         <p class="form__privacy">
           Vaše údaje použijeme iba na organizačné účely svadby. V prípade otázok nás kontaktujte na
@@ -207,6 +217,7 @@
       </form>
     </section>
 
+    <!-- DARCEKY SEKCIA
     <section id="darceky" class="section gifts">
       <h2 class="section-title">Svadobné dary</h2>
       <p class="section__intro">
@@ -235,6 +246,7 @@
       </div>
       <p class="section__note">Posledná aktualizácia: <span class="placeholder">TODO dátum</span></p>
     </section>
+    -->
 
     <section id="galeria" class="section gallery">
       <h2 class="section-title">Galéria</h2>
@@ -264,7 +276,7 @@
   <footer id="kontakt" class="site-footer">
     <div class="footer__content">
       <div>
-        <h2 class="footer__title">Ostaňme v kontakte</h2>
+        <h2 class="footer__title">Ak máte akékoľvek otázky, kontaktujte nás:</h2>
         <ul class="footer__list">
           <li><strong>E-mail:</strong> <a href="mailto:baloghmichal03@gmail.com">baloghmichal03@gmail.com</a></li>
           <li><strong>Telefón:</strong> <a href="tel:+421949451906">+421 949 451 906</a></li>
@@ -280,7 +292,7 @@
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/countdown.js" defer></script>
   <script src="./assets/js/rsvp.js" defer></script>
-  <script src="./assets/js/gifts.js" defer></script>
+  <!-- <script src="./assets/js/gifts.js" defer></script> -->
   <script src="./assets/js/gallery.js" defer></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
   </script>
