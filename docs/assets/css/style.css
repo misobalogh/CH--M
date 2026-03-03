@@ -4,6 +4,7 @@
   --color-bg: #faf9f7;
   --color-surface: rgba(191, 162, 122, 0.1);
   --color-primary: #bfa27a;
+  --color-fancy:  rgb(145, 15, 15);
   --color-accent: #8faea0;
   --color-text: #1f1f1f;
   --color-muted: #6d6c6a;
@@ -59,6 +60,10 @@ img {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1.5rem;
   text-align: center;
+}
+
+.section-title.rsvp-title {
+  font-family: var(--font-body);
 }
 
 .section__intro,
@@ -117,7 +122,7 @@ body::before {
   /* font-weight: 600; */
   /* letter-spacing: 0.12em; */
   /* text-transform: uppercase; */
-  color: var(--color-text);
+  color: var(--color-fancy);
 }
 
 .nav-toggle {
@@ -248,7 +253,7 @@ body::before {
 .hero__title {
   font-family: var(--font-heading);
   font-weight: 500;
-  color: rgb(145, 15, 15);
+  color: var(--color-fancy);
   font-size: clamp(5.5rem, 12vw, 6rem);
   /* letter-spacing: 0.1em; */
   /* text-transform: lowercase; */
@@ -282,8 +287,8 @@ body::before {
 }
 
 .button--outline {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  border-color: var(--color-fancy);
+  color: var(--color-fancy);
   background: transparent;
 }
 
@@ -330,7 +335,7 @@ body::before {
 .countdown__label {
   color: var(--color-muted);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: 0.75rem;
 }
 
@@ -349,11 +354,13 @@ body::before {
   max-width: 720px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
+  color: var(--color-fancy);
   font-style: italic;
   font-size: 1.2rem;
-  background: rgba(143, 174, 160, 0.12);
+  background: #fff;
   border-radius: 18px;
+  box-shadow: var(--shadow-soft);
 }
 
 .venue address {
@@ -393,6 +400,10 @@ body::before {
   margin: 2.5rem auto;
 }
 
+/* .timeline__item h3 {
+  color: var(--color-fancy);
+} */
+
 .timeline__item {
   background: #fff;
   padding: 1.8rem;
@@ -409,7 +420,7 @@ body::before {
 
 
 .timeline__time {
-  color: var(--color-accent);
+  color: var(--color-fancy);
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -448,14 +459,22 @@ body::before {
   text-align: center;
 }
 
+.party-card__name {
+  margin: 0 0 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
 .party-card__body h3 {
   margin: 0 0 0.5rem;
   font-family: var(--font-heading);
 }
 
-.party-card__body p {
+.party-card__body p:not(.party-card__name) {
   margin: 0;
   color: var(--color-muted);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .form {
@@ -848,6 +867,7 @@ body::before {
 
 .footer__title {
   font-family: var(--font-heading);
+  /* font-size: 1rem; */
   margin: 0 0 1rem;
 }
 
