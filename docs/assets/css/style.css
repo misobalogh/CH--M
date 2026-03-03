@@ -477,6 +477,28 @@ body::before {
   font-style: italic;
 }
 
+.menu-accordion {
+  margin-top: 0.0rem;
+  text-align: left;
+}
+
+.menu-accordion summary {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+.menu-content p {
+  margin: 0.5rem 0;
+}
+
+.menu-content p strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
 .form {
   width: min(100%, 600px);
   margin: 0 auto;
