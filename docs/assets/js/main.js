@@ -1,31 +1,54 @@
-// Hero video autoplay fallback for mobile devices that block autoplay
-(function () {
+// Hero video autoplay fallback for iOS Chrome/Safari
+function initHeroVideo() {
   const video = document.querySelector(".hero__media video");
   if (!video) return;
 
+  // iOS WKWebView vyžaduje muted ako DOM atribút, nestačí len JS property
+  video.muted = true;
+  video.setAttribute("muted", "");
+  video.setAttribute("playsinline", "");
+  video.setAttribute("webkit-playsinline", "");
+
   const tryPlay = () => {
+    if (!video.paused) return;
     const p = video.play();
     if (p && typeof p.catch === "function") {
-      p.catch(() => {
-        const resume = () => {
-          video.play();
-          document.removeEventListener("touchstart", resume);
-          document.removeEventListener("click", resume);
-        };
-        document.addEventListener("touchstart", resume, { once: true });
-        document.addEventListener("click", resume, { once: true });
-      });
+      p.catch(() => {}); // tiché potlačenie chyby, retry rieši interaction listener nižšie
     }
   };
 
-  if (video.readyState >= 2) {
+  // Skús okamžite (funguje na desktope + niektorých iOS)
+  tryPlay();
+
+  // Záloha: skús po plnom načítaní stránky
+  window.addEventListener("load", tryPlay, { once: true });
+
+  // Stránka sa stala viditeľnou (otvorenie tabu, návrat z inej appky)
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") tryPlay();
+  });
+
+  // pageshow pokrýva back/forward cache aj otvorenie cez link
+  window.addEventListener("pageshow", () => {
     tryPlay();
-  } else {
-    video.addEventListener("canplay", tryPlay, { once: true });
-  }
-})();
+  });
+
+  // iOS Chrome/Safari blokuje autoplay bez interakcie — spusti na prvý dotyk/klik
+  const events = ["touchstart", "pointerdown", "click"];
+  const resumeOnInteraction = () => {
+    tryPlay();
+    events.forEach((e) =>
+      document.removeEventListener(e, resumeOnInteraction)
+    );
+  };
+  events.forEach((e) =>
+    document.addEventListener(e, resumeOnInteraction, { passive: true, once: true })
+  );
+}
 
 document.addEventListener("DOMContentLoaded", () => {
+  initHeroVideo();
+
   const navToggle = document.querySelector(".nav-toggle");
   const navList = document.querySelector(".nav-list");
   const navLinks = navList ? navList.querySelectorAll("a[href^='#']") : [];
