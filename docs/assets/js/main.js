@@ -1,3 +1,30 @@
+// Hero video autoplay fallback for mobile devices that block autoplay
+(function () {
+  const video = document.querySelector(".hero__media video");
+  if (!video) return;
+
+  const tryPlay = () => {
+    const p = video.play();
+    if (p && typeof p.catch === "function") {
+      p.catch(() => {
+        const resume = () => {
+          video.play();
+          document.removeEventListener("touchstart", resume);
+          document.removeEventListener("click", resume);
+        };
+        document.addEventListener("touchstart", resume, { once: true });
+        document.addEventListener("click", resume, { once: true });
+      });
+    }
+  };
+
+  if (video.readyState >= 2) {
+    tryPlay();
+  } else {
+    video.addEventListener("canplay", tryPlay, { once: true });
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navList = document.querySelector(".nav-list");
